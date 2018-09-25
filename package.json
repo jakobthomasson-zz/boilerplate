@@ -7,8 +7,11 @@
   "author": "jakobthomasson <jakob.thomasson@jayway.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --history-api-fallback --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js"
+    "start": "webpack-dev-server --config webpack.dev.js --history-api-fallback",
+    "test": "jest",
+    "lint": "tslint src",
+    "build": "webpack --config webpack.prod.js",
+    "build:ssr": "webpack --config webpack.ssr.js"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
@@ -25,11 +28,12 @@
     "tslint-config-airbnb": "^5.11.0",
     "typescript": "^3.0.3",
     "webpack": "^4.20.0",
-    "webpack-cli": "^3.1.1"
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "webpack-dev-server": "^3.1.9"
+    "react-dom": "^16.5.2"
   }
 }

@@ -1,15 +1,9 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const path = require('path');
 
-module.exports = {
+module.exports = mode => ({
   entry: './src/index.tsx',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
-  },
-  devtool: 'inline-source-map',
+  mode,
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json']
   },
@@ -38,13 +32,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: './public/index.html',
-      filename: './index.html'
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
     })
-  ],
-};
+  ]
+});
