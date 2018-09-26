@@ -8,15 +8,18 @@ import 'main.css';
 import App from 'App';
 import store from 'store';
 
-const root = (
-  <Provider store={store}>
-    <BrowserRouter>
-      <App message="World" />
-    </BrowserRouter>
-  </Provider>
-);
+const root = () => {
+  console.log('root');
+  return (
+    <Provider store={store} >
+      <BrowserRouter>
+        <App message="World" />
+      </BrowserRouter>
+    </Provider >
+  );
+};
 
 render(
-  root,
+  root(),
   document.getElementById('root'),
 );
