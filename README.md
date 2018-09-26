@@ -1,6 +1,9 @@
 Typescript boilerplate
 ============
 
+Techniques
+------------
+
 Typescript boilerplate for following `techniques:`
 
   * React
@@ -12,25 +15,42 @@ Typescript boilerplate for following `techniques:`
 
 File structure
 ------------
-Inspired by [this article](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76).
+Somewhat inspired by [this article](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76).
 
 ### Folders ### 
 
-  * **dist** - *generated files*
-  * **public** - *templates, used in webpack to generate to **dist***
-  * **src** - *Source files, e.g. code here*
-    * **components** - *Reusable components, declaritive and unique names.*
-    * **UI** - *No business logic, Buttons, Inputs, Checkboxes, Selects...*
-    * **containers** - ** 
-    * **helpers** - **
-    * **pages** - **
-    * **store** - ** 
-    * **styles** - **
-  * **types** - 
+  * **dist,** generated files.
+  * **public,** templates, used in webpack to generate to *dist*.
+  * **src,** source files - mainly code here.
+    * **components,** reusable components, declaritive and unique names. <br/>Recieve data from parent and present it using UI components.
+      * **common,** common is components that build from multiple *UI* components parts.
+      * **containers,** containers are components that are aware of Redux, <br/>or responsible for retrieving data.
+      * **UI,** no business logic, Buttons, Inputs, Checkboxes, Selects...
+    * **helpers,**
+    * **pages,** grouped accordingly to the route definition and not by modules.
+    <br/>Use *containers* or/and *components* to compose a page to the application.
+    * **store,** 
+    <br/> 
+    * **styles,**
+    <br/>
+  * **types,**
+  <br/>
 
 ### Files ###
 
 We follow the pattern `path-based-component-naming`
+  * Name accordingly to it's relative path to the folders
+    * `components/User/List.tsx` would be named `UserList`
+    * `components/User/Form/index.tsx` would be named `UserForm`
+    * `components/UI/TextInput/label.tsx` would be named `TextInputLabel`
+  * This does not apply to *One lvl deep*  folders like `helpers` and `styles`.
+  <br/> Folders like these should have index.ts file with all exports concerning folder:
+  <br/> ``
+    * `styles/color.ts`'s would be named `colorStyle` 
+    * `helpers/example.ts`'s would be named `exampleHelper`
+    * 
+
+
 
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
