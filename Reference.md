@@ -1,37 +1,7 @@
-Typescript boilerplate
+An h1 header
 ============
 
-Typescript boilerplate for following `techniques:`
-
-  * React
-  * React Router
-  * Redux
-  * Redux-Saga
-  * Webpack 4
-  * TSLint
-
-File structure
-------------
-Inspired by [this article](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76).
-
-### Folders ### 
-
-  * **dist** - *generated files*
-  * **public** - *templates, used in webpack to generate to **dist***
-  * **src** - *Source files, e.g. code here*
-    * **components** - *Reusable components, declaritive and unique names.*
-    * **UI** - *No business logic, Buttons, Inputs, Checkboxes, Selects...*
-    * **containers** - ** 
-    * **helpers** - **
-    * **pages** - **
-    * **store** - ** 
-    * **styles** - **
-  * **types** - 
-
-### Files ###
-
-We follow the pattern `path-based-component-naming`
-
+Paragraphs are separated by a blank line.
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
 look like:
