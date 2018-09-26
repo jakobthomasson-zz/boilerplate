@@ -1,6 +1,7 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common')('development');
+const merge = require("webpack-merge");
+const common = require("./webpack.common")("development");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+var path = require("path");
 
 module.exports = merge(common, {
   output: {
@@ -8,7 +9,14 @@ module.exports = merge(common, {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    open: true,
+    clientLogLevel: 'none',
+    historyApiFallback: true,
+    overlay: true,
+    port: 3000
+
   },
   plugins: [
     new HtmlWebPackPlugin({

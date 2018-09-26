@@ -1,7 +1,15 @@
+const path = require('path');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+// function srcPath(subdir) {
+//   return path.join(__dirname, subdir);
+// }
+
 module.exports = mode => ({
   entry: './src/index.tsx',
   mode,
   resolve: {
+    // alias: { src: srcPath('src/') },
+    modules: [path.join(__dirname, 'src'), 'node_modules'],
     extensions: ['.tsx', '.ts', '.js', '.json']
   },
   module: {

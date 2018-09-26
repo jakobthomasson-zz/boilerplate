@@ -4,6 +4,8 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common')('production');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 const path = require('path');
 
@@ -21,6 +23,9 @@ module.exports = merge(common, {
     extensions: ['.tsx', '.ts', '.js', '.json']
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    }),
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html'

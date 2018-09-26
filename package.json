@@ -7,7 +7,7 @@
   "author": "jakobthomasson <jakob.thomasson@jayway.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --history-api-fallback",
+    "start": "webpack-dev-server --config webpack.dev.js --progress",
     "test": "jest",
     "lint": "tslint src",
     "build": "webpack --config webpack.prod.js",

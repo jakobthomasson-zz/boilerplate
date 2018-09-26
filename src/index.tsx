@@ -1,10 +1,10 @@
 
 import * as React from 'react';
 import { render } from 'react-dom';
-import App from './App';
 import './main.css';
+import App from 'App';
 
 render(
-  <App message="Worlddd" />,
+  <App message="Worldddd" />,
   document.getElementById('root'),
 );
