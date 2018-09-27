@@ -1,4 +1,5 @@
 import { colorHelpers } from 'helpers';
+
 export const spacing = {
   xxsmall: '1px',
   xsmall: '2px',
@@ -21,9 +22,9 @@ export const fontsize = {
   xxxlarge: `calc(${fontsize_base} / ${Math.pow(fontsize_scale, 5)} )`,
 };
 
+// // font.google.com
 export const font = {
 };
-// // font.google.com
 // export const font = {
 //   SansSerif: "'Noto Serif KR', sans-serif",
 //   Serif: "'Montserrat', sans-serif",
@@ -82,26 +83,3 @@ export const color = {
 //      Using a semi-transparent color like rgba(0, 0, 0, 0.4) is most common, and a nice effect, as it doesn't completely/opaquely cover what it's over,
 //      but allows what's underneath to show through a bit, like a real shadow.
 // */
-
-// export function getOpacity(opacity: number, hexColor: string) {
-//   const rgbColor: any = hexToRgb(hexColor);
-//   return `rgba(${rgbColor.r},${rgbColor.g},${rgbColor.b},${opacity})`;
-// }
-
-// // function componentToHex(c: number) {
-// //   var hex = c.toString(16);
-// //   return hex.length === 1 ? '0' + hex : hex;
-// // }
-
-// // function rgbToHex(r: number, g: number, b: number) {
-// //   return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
-// // }
-
-// function hexToRgb(hex: string) {
-//   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-//   return result ? {
-//     r: parseInt(result[1], 16),
-//     g: parseInt(result[2], 16),
-//     b: parseInt(result[3], 16),
-//   } : null;
-// }

@@ -1,16 +1,18 @@
 import * as React from 'react';
-interface AppProps {
-  message: string;
-}
-// export default function ({ message }: AppProps) {
-//   return <h1>Hello {message}</h1>;
-// }
+import { Switch, Route } from 'react-router';
+import { Main } from 'components/UI/Wrapper';
 
 const App = () => {
   return (
-    <section>
-      hej
-    </section>
+    <>
+      {/* header, modal, loader etc. here */}
+      <Main>
+        <Switch>
+          <Route exact path="/" component={() => <div>yolo</div>} />
+          <Route component={() => <div>404</div>} />
+        </Switch>
+      </Main>
+    </>
   );
 };
 
