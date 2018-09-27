@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'components/UI/Button';
+
 const initialState = { clicksCount: 0 };
 type State = Readonly<typeof initialState>;
 
