@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 
-export const withDefaultProps = <P extends object, DP extends Partial<P> = Partial<P>>(
+const withDefaultProps = <P extends object, DP extends Partial<P> = Partial<P>>(
   defaultProps: DP,
   Cmp: ComponentType<P>,
 ) => {
@@ -18,3 +18,5 @@ export const withDefaultProps = <P extends object, DP extends Partial<P> = Parti
   // for original props  and setting the correct return type
   return (Cmp as ComponentType<any>) as ComponentType<Props>;
 };
+
+export default withDefaultProps;
