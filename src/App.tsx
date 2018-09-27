@@ -2,6 +2,16 @@ import * as React from 'react';
 interface AppProps {
   message: string;
 }
-export default function ({ message }: AppProps) {
-  return <h1>Hello {message}</h1>;
-}
+// export default function ({ message }: AppProps) {
+//   return <h1>Hello {message}</h1>;
+// }
+
+const App = () => {
+  return (
+    <section>
+      hej
+    </section>
+  );
+};
+
+export default App;

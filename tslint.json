@@ -3,6 +3,13 @@
   "rules": {
     "import-name": [
       false
+    ],
+    "variable-name": [
+      false
+    ],
+    "max-line-length": [
+      true,
+      180
     ]
   }
 }

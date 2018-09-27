@@ -12,7 +12,7 @@ const root = () => {
   return (
     <Provider store={store} >
       <BrowserRouter>
-        <App message="World" />
+        <App />
       </BrowserRouter>
     </Provider >
   );

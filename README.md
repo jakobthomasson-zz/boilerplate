@@ -1,6 +1,9 @@
 Typescript boilerplate
 ============
 
+
+Alot of the methods used are described in [this guide](https://github.com/piotrwitek/react-redux-typescript-guide).
+
 Techniques
 ------------
 
@@ -49,6 +52,12 @@ We follow the pattern `path-based-component-naming`
     * `styles/color.ts`'s would be named `colorStyle` 
     * `helpers/example.ts`'s would be named `exampleHelper`
     * 
+
+
+Components
+------------
+Somewhat inspired by [this article](https://github.com/piotrwitek/react-redux-typescript-guide).
+
 
 
 
