@@ -1,7 +1,9 @@
 import { compose } from 'redux';
 
-export const composeEnhancers =
+const composeEnhancers =
   (process.env.NODE_ENV === 'development' &&
     window &&
     (window).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
+
+export default { composeEnhancers };

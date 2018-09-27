@@ -9,7 +9,6 @@ import App from 'App';
 import store from 'store';
 
 const root = () => {
-  console.log('root');
   return (
     <Provider store={store} >
       <BrowserRouter>

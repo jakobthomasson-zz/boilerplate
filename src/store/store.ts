@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 // import { createEpicMiddleware } from 'redux-observable';
 
-import { composeEnhancers } from 'helpers/storeHelpers';
+import { storeHelpers } from 'helpers';
 import rootReducer from './root-reducer';
 // import rootEpic from './root-epic';
 // import services from '../services';
@@ -11,14 +11,13 @@ import rootReducer from './root-reducer';
 // });
 
 function configureStore(initialState?: object) {
-  console.log('configureStore');
   // configure middlewares
   // const middlewares = [epicMiddleware];
   // const middlewares = [];
 
   // compose enhancers
   // const enhancer = composeEnhancers(applyMiddleware(...middlewares));´
-  const enhancer = composeEnhancers(applyMiddleware());
+  const enhancer = storeHelpers.composeEnhancers(applyMiddleware());
 
   // create store
   // return createStore(rootReducer, initialState!, enhancer);

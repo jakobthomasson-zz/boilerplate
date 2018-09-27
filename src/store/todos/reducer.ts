@@ -14,7 +14,6 @@ const initialState: TodosState = {
 };
 
 export default (state: TodosState = initialState, action: TodosAction) => {
-  console.log('todos/reducer');
   switch (action.type) {
     case getType(actions.add):
       const todos = [...state.todos, action.payload];
