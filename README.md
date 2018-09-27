@@ -3,6 +3,7 @@ Typescript boilerplate
 
 
 Alot of the methods used are described in [this guide](https://github.com/piotrwitek/react-redux-typescript-guide).
+Best practice and component pattern inspired from [this guide](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935).
 
 Techniques
 ------------

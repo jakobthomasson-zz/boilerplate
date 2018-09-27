@@ -9,10 +9,10 @@ class ButtonCounter extends Component<object, State> {
 
   render() {
     const { clicksCount } = this.state;
-
+    console.log('render/ButtonCounter');
     return (
       <>
-        <Button onClick={this.handleIncrement}>Increment</Button>
+        <Button onClick={this.handleIncrement} >Increment</Button>
         <Button onClick={this.handleDecrement}>Decrement</Button>
         You've clicked me {clicksCount} times
       </>
@@ -31,4 +31,6 @@ class ButtonCounter extends Component<object, State> {
  */
 
 const incrementClicksCount = (prevState: State) => ({ clicksCount: prevState.clicksCount + 1 });
-const decrementClicksCount = (prevState: State) => ({ clicksCount: prevState.clicksCount + 1 });
+const decrementClicksCount = (prevState: State) => ({ clicksCount: prevState.clicksCount - 1 });
+
+export default ButtonCounter;
