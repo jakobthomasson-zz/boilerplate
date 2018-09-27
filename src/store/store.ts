@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 // import { createEpicMiddleware } from 'redux-observable';
 
-// import { composeEnhancers } from './utils';
+import { composeEnhancers } from 'helpers/storeHelpers';
 import rootReducer from './root-reducer';
 // import rootEpic from './root-epic';
 // import services from '../services';
@@ -18,11 +18,11 @@ function configureStore(initialState?: object) {
 
   // compose enhancers
   // const enhancer = composeEnhancers(applyMiddleware(...middlewares));´
-  // const enhancer = composeEnhancers(applyMiddleware());
+  const enhancer = composeEnhancers(applyMiddleware());
 
   // create store
   // return createStore(rootReducer, initialState!, enhancer);
-  return createStore(rootReducer, initialState!);
+  return createStore(rootReducer, initialState!, enhancer);
 
 }
 
