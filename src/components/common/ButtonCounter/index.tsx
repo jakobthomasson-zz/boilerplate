@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'components/UI/Button';
+import ToggleableMenu from '../ToggleableMenu';
 
 const initialState = { clicksCount: 0 };
 type State = Readonly<typeof initialState>;
@@ -12,6 +13,7 @@ class ButtonCounter extends Component<object, State> {
     console.log('render/ButtonCounter');
     return (
       <>
+        <ToggleableMenu />
         <Button theme="secondary" onClick={this.handleIncrement} >Increment</Button>
         <Button onClick={this.handleDecrement}>Decrement</Button>
         You've clicked me {clicksCount} times
