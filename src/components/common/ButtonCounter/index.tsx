@@ -12,7 +12,7 @@ class ButtonCounter extends Component<object, State> {
     console.log('render/ButtonCounter');
     return (
       <>
-        <Button onClick={this.handleIncrement} >Increment</Button>
+        <Button theme="secondary" onClick={this.handleIncrement} >Increment</Button>
         <Button onClick={this.handleDecrement}>Decrement</Button>
         You've clicked me {clicksCount} times
       </>
