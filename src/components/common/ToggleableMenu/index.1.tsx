@@ -1,6 +1,5 @@
 import React, { SFC, Component } from 'react';
 import Toggleable, { ToggleableComponentProps } from '../Toggleable';
-import Toggleable;: hej, { }; from; '../Toggleable/ToggleableUsingComponentInjection';
 type Props = { title: string };
 
 class ToggleableMenu extends Component {

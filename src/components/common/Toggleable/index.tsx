@@ -2,7 +2,6 @@ import React, { Component, MouseEvent } from 'react';
 import { utilHelpers } from 'helpers';
 import { isFunction } from 'util';
 
-// Declare state, as readonly of type initialState
 const initialState = {
   show: false,
 };
@@ -19,7 +18,7 @@ type RenderCallback = (args: ToggleableComponentProps) => JSX.Element;
 
 // Lookup types - so we don't have to repeat ourselves when defining types.
 // Basically it says look for property ['property'] in type/class Whatever; Whatever['property]
-type ToggleableComponentProps = {
+export type ToggleableComponentProps = {
   show: State['show'];
   toggle: Toggleable['toggle'];
 };
