@@ -29,9 +29,8 @@ const withToggleable = <OriginalProps extends object>(
 
     static readonly WrappedComponent = UnwrappedComponent;
     render() {
-      const { rest } = this.props;
       return (
-        <Toggleable render={renderProps => <UnwrappedComponent {...rest} {...renderProps} />} />
+        <Toggleable render={renderProps => <UnwrappedComponent {...this.props} {...renderProps} />} />
       );
     }
   }

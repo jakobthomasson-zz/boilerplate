@@ -1,5 +1,6 @@
 import React, { SFC, Component } from 'react';
 import { Toggleable, ToggleableComponentProps } from '../Toggleable/ToggleableUsingComponentInjection';
+import { withToggleable } from '../../hoc';
 
 type MenuItemProps = { title: string };
 // const ToggleableWithTitle = Toggleable.ofType<MenuItemProps>();
@@ -20,7 +21,7 @@ const InjectedItem: SFC<InjectedProps & ToggleableComponentProps> = ({
   show,
   children,
 }) => (
-    <>
+  <>
       <div onClick={toggle}>
         <h1>{title}</h1>
       </div>
@@ -32,12 +33,14 @@ class ToggleableMenu extends Component {
   render() {
     return (
       <>
-        <ToggleableMenuViaComponentInjection title="First Menu">Some Content</ToggleableMenuViaComponentInjection>
-        <ToggleableMenuViaComponentInjection title="Second Menu">Some Content</ToggleableMenuViaComponentInjection>
-        <ToggleableMenuViaComponentInjection title="Third Menu">Some Content</ToggleableMenuViaComponentInjection>
+        <ToggleableMenuViaHoc title="First Menu">Some Content</ToggleableMenuViaHoc>
+        <ToggleableMenuViaHoc title="Second Menu">Some Content</ToggleableMenuViaHoc>
+        <ToggleableMenuViaHoc title="Third Menu">Some Content</ToggleableMenuViaHoc>
       </>
     );
   }
 }
 
 export default ToggleableMenu;
+
+const ToggleableMenuViaHoc = withToggleable(InjectedItem);

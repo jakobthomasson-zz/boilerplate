@@ -30,11 +30,11 @@ export type ToggleableComponentProps<P extends object = object> = {
 } & P;
 
 export class Toggleable<T extends object = object> extends Component<Props<T>, State> {
-  static ofType<T extends object>() {
-    return Toggleable as Constructor<Toggleable<T>>;
-  }
+  // static ofType<T extends object>() {
+  //   return Toggleable as Constructor<Toggleable<T>>;
+  // }
   static readonly defaultProps: Props = defaultProps;
-  readonly state: State = { show: this.state.show };
+  readonly state: State = initialState;
 
   render() {
     const { component: InjectedComponent, children, render, props } = this.props;
@@ -47,7 +47,7 @@ export class Toggleable<T extends object = object> extends Component<Props<T>, S
         </InjectedComponent>
       );
     }
-    // If render prop is used <Toggleable render={() => <div>Render method</div>} />
+    // If render prop is used <Toggleab render={() => <div>Render method</div>} />
     // See RenderTest
     if (render) {
       return render(renderProps);
@@ -90,14 +90,22 @@ const ChildrenTest = () => (
 );
 
 type MenuItemProps = { title: string };
+type ToggleableMenuProps = MenuItemProps;
 // Now with static ofType factory method, we can create our properly typed generic component.
 // ofType is kind of an identity fucntion, returns the same implementation of Toggleable Component
 // with proper props={...} type definition
-const ToggleableWithTitle = Toggleable.ofType<MenuItemProps>();
+// const ToggleableWithTitle = Toggleable.ofType<MenuItemProps>();
 
-type ToggleableMenuProps = MenuItemProps;
+// const ToggleableMenuViaComponentInjection: SFC<ToggleableMenuProps> = ({ title, children }) => (
+//   <ToggleableWithTitle component={() => <div>component injection</div>} props={{ title }}>
+//     {children}
+//   </ToggleableWithTitle>
+// );
+
+// instead of ofType we can use new TS feautre, component generic
+
 const ToggleableMenuViaComponentInjection: SFC<ToggleableMenuProps> = ({ title, children }) => (
-  <ToggleableWithTitle component={() => <div>component injection</div>} props={{ title }}>
+  <Toggleable<ToggleableMenuProps> component={() => <div>component injection</div>} props={{ title }}>
     {children}
-  </ToggleableWithTitle>
+  </Toggleable>
 );
